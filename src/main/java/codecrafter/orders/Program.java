@@ -28,8 +28,8 @@ public class Program {
     Product house1 = Product.create("House M.D. Season 1", MOVIE, LOCAL, dollars("29.99"));
     Product house7 = Product.create("House M.D. Season 7", MOVIE, IMPORTED, dollars("34.50"));
 
-    Tax basicSalesTax = Tax.create("BST", "0.10", exempt(BOOK, FOOD, MEDICAL));
-    Tax importDuty = Tax.create("IMD", "0.05", imported());
+    TaxMethod basicSalesTax = TaxMethod.create("BST", "0.10", exempt(BOOK, FOOD, MEDICAL));
+    TaxMethod importDuty = TaxMethod.create("IMD", "0.05", imported());
 
     TaxingPractice taxes = TaxingPractice.create();
     taxes.add(basicSalesTax);

@@ -4,15 +4,15 @@ import java.math.BigDecimal;
 
 public class TaxEntry implements OrderEntry {
 
-  public static TaxEntry create(ProductEntry taxedEntry, Tax tax, Money amount) {
+  public static TaxEntry create(ProductEntry taxedEntry, TaxMethod tax, Money amount) {
     return new TaxEntry(taxedEntry, tax, amount);
   }
 
   private final ProductEntry taxedEntry;
-  private final Tax tax;
+  private final TaxMethod tax;
   private final Money amount;
 
-  private TaxEntry(ProductEntry taxedEntry, Tax tax, Money amount) {
+  private TaxEntry(ProductEntry taxedEntry, TaxMethod tax, Money amount) {
     this.taxedEntry = taxedEntry;
     this.tax = tax;
     this.amount = amount;

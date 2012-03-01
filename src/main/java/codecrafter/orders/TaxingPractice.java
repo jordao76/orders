@@ -8,17 +8,17 @@ public class TaxingPractice {
     return new TaxingPractice();
   } 
   
-  private final List<Tax> taxes = new ArrayList<Tax>();
+  private final List<TaxMethod> taxes = new ArrayList<TaxMethod>();
   
   private TaxingPractice() {}
   
-  public void add(Tax tax) {
+  public void add(TaxMethod tax) {
     taxes.add(tax);
   }
 
   public Collection<TaxEntry> apply(ProductEntry entry) {
     List<TaxEntry> entries = new ArrayList<TaxEntry>();
-    for (Tax tax : taxes) {
+    for (TaxMethod tax : taxes) {
       if (tax.isEligible(entry)) {
         TaxEntry taxEntry = apply(tax, entry);
         entries.add(taxEntry);
@@ -27,7 +27,7 @@ public class TaxingPractice {
     return entries;
   }
 
-  private TaxEntry apply(Tax tax, ProductEntry entry) {
+  private TaxEntry apply(TaxMethod tax, ProductEntry entry) {
     Money taxAmount = tax.calculate(entry.getAmount());
     return TaxEntry.create(entry, tax, taxAmount);
   }

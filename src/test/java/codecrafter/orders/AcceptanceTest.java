@@ -29,8 +29,8 @@ public class AcceptanceTest {
   }
 
   private void setUpTaxes() {
-    Tax basicSalesTax = Tax.create("BST", "0.10", exempt(BOOK, FOOD, MEDICAL));
-    Tax importDuty = Tax.create("IMD", "0.05", imported());
+    TaxMethod basicSalesTax = TaxMethod.create("BST", "0.10", exempt(BOOK, FOOD, MEDICAL));
+    TaxMethod importDuty = TaxMethod.create("IMD", "0.05", imported());
     taxingPractice = TaxingPractice.create();
     taxingPractice.add(basicSalesTax);
     taxingPractice.add(importDuty);    
