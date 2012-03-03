@@ -1,9 +1,10 @@
-A Super Simple Order Application
-================================
+A Super Simple and Incomplete Order Application
+===============================================
 
 You'll need [maven](http://maven.apache.org) to build and execute it:
 
     mvn compile
+    ...
     mvn exec:java -Dexec.mainClass="codecrafter.orders.Program"
 
 Or run the tests:
