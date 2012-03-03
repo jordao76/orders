@@ -1,5 +1,5 @@
-A Simple Order Sample Application
-=================================
+A Super Simple Order Application
+================================
 
 You'll need [maven](http://maven.apache.org) to build and execute it:
 
