@@ -1,7 +1,7 @@
 A Simple Order Sample Application
 =================================
 
-You'll need [maven](http://maven.apache.org) to build it:
+You'll need [maven](http://maven.apache.org) to build and execute it:
 
     mvn compile
     mvn exec:java -Dexec.mainClass="codecrafter.orders.Program"
