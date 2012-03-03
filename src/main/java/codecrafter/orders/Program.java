@@ -31,7 +31,7 @@ public class Program {
     TaxMethod basicSalesTax = TaxMethod.create("BST", "0.10", exempt(BOOK, FOOD, MEDICAL));
     TaxMethod importDuty = TaxMethod.create("IMD", "0.05", imported());
 
-    TaxingPractice taxes = TaxingPractice.create();
+    TaxMethodsPractice taxes = TaxMethodsPractice.create();
     taxes.add(basicSalesTax);
     taxes.add(importDuty);
 

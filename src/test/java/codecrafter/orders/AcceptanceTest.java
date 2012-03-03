@@ -16,7 +16,7 @@ public class AcceptanceTest {
 
   private Mockery context = new JUnit4Mockery();
   
-  private TaxingPractice taxingPractice;
+  private TaxMethodsPractice taxingPractice;
   private Product exemptLocal;
   private Product exemptImported;
   private Product taxedLocal;
@@ -31,7 +31,7 @@ public class AcceptanceTest {
   private void setUpTaxes() {
     TaxMethod basicSalesTax = TaxMethod.create("BST", "0.10", exempt(BOOK, FOOD, MEDICAL));
     TaxMethod importDuty = TaxMethod.create("IMD", "0.05", imported());
-    taxingPractice = TaxingPractice.create();
+    taxingPractice = TaxMethodsPractice.create();
     taxingPractice.add(basicSalesTax);
     taxingPractice.add(importDuty);    
   }
